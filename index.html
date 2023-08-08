@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Coverter</title>
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <style>
+        body{
+    background-color: black;
+}
+
+nav{
+    background-color: red;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1{
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+textarea{
+    border-radius: 7.5px;
+    border: 3.5px solid rgb(51, 0, 255);
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    font-size: 1.3em;
+    box-shadow: 0px 0px 100px rgb(51, 0, 255);
+}
+
+.numpad h2,h2{
+    text-align: center;
+}
+
+
+
+#numpad{
+    /* display: flex; */
+    margin-top: 50px;
+    background-color: yellow;
+    border-radius: 20px;
+    box-shadow: 10px 10px 60px red;
+}
+
+.row{
+      display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+  flex-wrap: wrap
+}
+.row button{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3.5px solid black;
+    flex-direction: row;
+    margin: 7px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+footer{
+    color: wheat;
+}
+
+footer h2{
+    display: block;
+
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer, strong{
+    /* margin-bottom: 15px; */
+    color: white;
+    /* font-size: medium; */
+}
+
+footer img{
+    /* margin: 2px; */
+    /* display: flex; */
+    padding: 17px;
+    /* justify-content: space-evenly; */
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <strong><h1>Welcome To Temprature Converter</h1></strong>
+
+        
+    </nav>
+
+    <!-- <h2>Chhose the mode to enter</h2>
+    <select name="temp" id="temp">
+        <option value="">--SELECT--</option>
+        <option value="">CELCIUS</option>
+        <option value="">FAHR</option>
+        <option value="">KELVIN</option>
+    </select> -->
+
+    <!-- <fieldset>
+        <legend>Choose temperature: </legend>
+        <input type="radio" name="temp" id="Celsius" value="Celsius" class="temp">
+        <label for="Celsius">Celsius</label>
+        <input type="radio" name="temp" id="Fahrenheit" value="Fahrenheit" class="temp">
+        <label for="Fahrenheit">Fahrenheit</label>
+        <input type="radio" name="temp" id="Kelvin" value="Kelvin" class="temp">
+        <label for="Kelvin">Kelvin</label>
+    </fieldset> -->
+
+
+
+    <textarea name="show" id="show" cols="30" rows="3" placeholder="Enter the temperature "></textarea>
+
+    <section>
+     
+
+        <div class="numpad" id="numpad">
+            <h2>Choose the form of degree you want to enter</h2>
+            <div class="row" id="row-0">
+                <button id="btn" class="btn">F</button>
+                <button id="btn" class="btn">C</button>
+                <button id="btn" class="btn">K</button>
+                <button id="btn" class="btn">CLEAR</button>
+            </div>
+            <hr>
+            <div class="row" id="row-1">
+                <button id="btn" class="btn">4</button>
+                <button id="btn" class="btn">5</button>
+                <button id="btn" class="btn">6</button>
+                <button id="btn" class="btn">7</button>
+                <button id="btn" class="btn">8</button>
+                <button id="btn" class="btn">9</button>
+            </div>
+            <!-- <div class="row" id="row-2">
+                <button id="btn" class="btn">4</button>
+                <button id="btn" class="btn">5</button>
+                <button id="btn" class="btn">6</button>
+            </div> -->
+            <div class="row" id="row-3">
+                <button id="btn" class="btn">1</button>
+                <button id="btn" class="btn">2</button>
+                <button id="btn" class="btn">3</button>
+                <button id="btn" class="btn">0</button>
+                <button id="btn" class="btn">.</button>
+                <button id="btn" class="btn">BKSP</button>
+            </div>
+            <div class="row" id="row-4">
+                <!-- <button id="btn" class="btn">0</button>
+                <button id="btn" class="btn">.</button> -->
+                <!-- <button id="btn" class="btn">CF</button> -->
+            </div>
+            <div class="row" id="row-5">
+                <!-- <button id="btn" class="btn">CLEAR</button> -->
+                <!-- <button id="btn" class="btn">INV</button>
+                <button id="btn" class="btn">BKSP</button> -->
+            </div>
+            <hr>
+            <h2>Choose the coversion function</h2>
+            <div class="row" id="row-6">
+                <button id="btn" class="btn">FC</button>
+                <button id="btn" class="btn">FK</button>
+                <button id="btn" class="btn">CF</button>
+                <button id="btn" class="btn">CK</button>
+                <button id="btn" class="btn">KC</button>
+                <button id="btn" class="btn">KF</button>
+                <!-- <button id="btn" class="btn">INV</button>
+                <button id="btn" class="btn">BKSP</button> -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>	&#169 By <strong>SMARAN SATAPATHY</strong></h2>
+        <a href="https://www.linkedin.com/in/smaran-satapathy-388270257/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" alt="" width="30px" height="30px" class="insta"></a> <a href="https://www.instagram.com/smaransatapathy/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="" width="30px" height="30px"></a><a href="mailto:smaransatapathy31@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="" width="40px" height="30px"></a>
+    </footer>
+    </footer>
+
+    <!-- <script src="/index.js"></script> -->
+    <script>
+        let string =""
+let fahr=""
+let cel=""
+let kel=""
+// let sen=""
+let countf=0
+let countc=0
+let countk=0
+
+
+let store=document.querySelector('.temp')
+console.log(store)
+
+let buttons=document.querySelectorAll('.btn')
+
+Array.from(buttons).forEach((button)=>{
+    button.addEventListener('click',(e)=>{
+
+        if(e.target.innerHTML=='CF' && countc!=0)
+        {
+            // count++;
+            fahr=((9*string)/5)+32
+            fahr=eval(fahr)
+            
+            document.querySelector('textarea').value=` Temperature in Celsius is: ${string} \n Ans: Temperature in Fahr is: ${fahr}`
+            countc=0
+        }
+        else if(e.target.innerHTML=='CK' && countc!=0)
+        {
+            // count++;
+            kel=parseInt(string)+273.15
+            kel=eval(kel)
+            
+            document.querySelector('textarea').value=` Temperature in Celsius is: ${string} \n Ans: Temperature in Kelvin is: ${kel}`
+            countc=0
+        }
+        else if(e.target.innerHTML=='FC' &&countf!=0)
+        {
+            // count++;
+            cel=(5*(string-32))/9
+            cel=eval(cel)
+            
+            document.querySelector('textarea').value=` Temperature in Fahr is: ${string} \n Ans: Temperature in Celsius is: ${cel}`
+            countf=0
+        }
+        else if(e.target.innerHTML=='FK' &&countf!=0)
+        {
+            // count++;
+            kel=((5*(string-32))/9)+273.15
+            kel=eval(kel)
+            
+            document.querySelector('textarea').value=` Temperature in Fahr is: ${string} \n Ans: Temperature in Kelvin is: ${kel}`
+            countf=0
+        }
+        else if(e.target.innerHTML=='KC' &&countk!=0)
+        {
+            // count++;
+            cel=string-273.15
+            cel=eval(cel)
+            
+            document.querySelector('textarea').value=` Temperature in Kelvin is: ${string} \n Ans: Temperature in Celsius is: ${cel}`
+            countk=0
+        }
+        else if(e.target.innerHTML=='KF' &&countk!=0)
+        {
+            // count++;
+            fahr=(((string-273.15)*9)/5)+32
+            fahr=eval(fahr)
+            
+            document.querySelector('textarea').value=` Temperature in Kelvin is: ${string} \n Ans: Temperature in Fahrenheit is: ${fahr}`
+            countk=0
+        }
+        else if(e.target.innerHTML=='CLEAR')
+        {
+            string=""
+            document.querySelector('textarea').value=string
+        }
+        else if(e.target.innerHTML=='BKSP')
+        {
+            for( i=0;i<=string.length-2;i++)
+            {
+                 sen=sen+string.charAt(i)
+            }
+            string=sen;
+            sen=""
+            document.querySelector('textarea').value=string
+        }
+        else if(e.target.innerHTML=='F')
+        {
+            alert("Entered fahrenheit")
+           countf++
+        }
+        else if(e.target.innerHTML=='C')
+        {
+            alert("Entered Celsius")
+           countc++
+        }
+        else if(e.target.innerHTML=='K')
+        {
+            alert("Entered Kelvin")
+           countk++
+        }
+
+        // else if(e.target.innerHTML=='INV')
+        // {
+        //     cel=(5*(fahr-32))/9
+        //         cel=eval(cel)
+                 
+        //         document.querySelector('textarea').value=` Temperature in Fahr is: ${fahr} \n Ans: Temperature in Cel is: ${cel}`
+        //         // document.querySelector('textarea').value=""
+        // }
+
+        else{
+            console.log(e.target)
+        string=string+e.target.innerHTML
+        document.querySelector('textarea').value=string
+        }
+
+
+        
+
+       
+        
+    })
+})
+
+//C/5=(F-32)/9
+//=> (9C/5)+32
+    </script>
+</body>
+</html>
