@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Coverter</title>
-    <!-- <link rel="stylesheet" href="/style.css"> -->
+
+    <!-- CSS LINKS -->
     <style>
         body{
     background-color: black;
@@ -49,7 +50,6 @@ textarea{
 
 
 #numpad{
-    /* display: flex; */
     margin-top: 50px;
     background-color: yellow;
     border-radius: 20px;
@@ -95,57 +95,37 @@ footer{
     flex-wrap: wrap;
 }
 footer, strong{
-    /* margin-bottom: 15px; */
     color: white;
-    /* font-size: medium; */
 }
 
 footer img{
-    /* margin: 2px; */
-    /* display: flex; */
     padding: 17px;
-    /* justify-content: space-evenly; */
 }
 
     </style>
+    
 </head>
 <body>
-    <nav>
-        <strong><h1>Welcome To Temprature Converter</h1></strong>
 
-        
+    <!-- HEADER SECTION -->
+    <nav>
+        <strong><h1>Welcome To Temprature Converter</h1></strong>    
     </nav>
 
-    <!-- <h2>Chhose the mode to enter</h2>
-    <select name="temp" id="temp">
-        <option value="">--SELECT--</option>
-        <option value="">CELCIUS</option>
-        <option value="">FAHR</option>
-        <option value="">KELVIN</option>
-    </select> -->
-
-    <!-- <fieldset>
-        <legend>Choose temperature: </legend>
-        <input type="radio" name="temp" id="Celsius" value="Celsius" class="temp">
-        <label for="Celsius">Celsius</label>
-        <input type="radio" name="temp" id="Fahrenheit" value="Fahrenheit" class="temp">
-        <label for="Fahrenheit">Fahrenheit</label>
-        <input type="radio" name="temp" id="Kelvin" value="Kelvin" class="temp">
-        <label for="Kelvin">Kelvin</label>
-    </fieldset> -->
 
 
-
+    <!-- TEXTAREA SECTION -->
     <textarea name="show" id="show" cols="30" rows="3" placeholder="Enter the temperature "></textarea>
 
+    <!-- NUMPAD SECTION -->
     <section>
      
 
         <div class="numpad" id="numpad">
             <h2>Choose the form of degree you want to enter</h2>
             <div class="row" id="row-0">
-                <button id="btn" class="btn">F</button>
                 <button id="btn" class="btn">C</button>
+                <button id="btn" class="btn">F</button>
                 <button id="btn" class="btn">K</button>
                 <button id="btn" class="btn">CLEAR</button>
             </div>
@@ -158,12 +138,8 @@ footer img{
                 <button id="btn" class="btn">8</button>
                 <button id="btn" class="btn">9</button>
             </div>
-            <!-- <div class="row" id="row-2">
-                <button id="btn" class="btn">4</button>
-                <button id="btn" class="btn">5</button>
-                <button id="btn" class="btn">6</button>
-            </div> -->
-            <div class="row" id="row-3">
+           
+            <div class="row" id="row-2">
                 <button id="btn" class="btn">1</button>
                 <button id="btn" class="btn">2</button>
                 <button id="btn" class="btn">3</button>
@@ -171,40 +147,29 @@ footer img{
                 <button id="btn" class="btn">.</button>
                 <button id="btn" class="btn">BKSP</button>
             </div>
-            <div class="row" id="row-4">
-                <!-- <button id="btn" class="btn">0</button>
-                <button id="btn" class="btn">.</button> -->
-                <!-- <button id="btn" class="btn">CF</button> -->
-            </div>
-            <div class="row" id="row-5">
-                <!-- <button id="btn" class="btn">CLEAR</button> -->
-                <!-- <button id="btn" class="btn">INV</button>
-                <button id="btn" class="btn">BKSP</button> -->
-            </div>
+           
             <hr>
             <h2>Choose the coversion function</h2>
-            <div class="row" id="row-6">
+            <div class="row" id="row-3">
                 <button id="btn" class="btn">FC</button>
                 <button id="btn" class="btn">FK</button>
                 <button id="btn" class="btn">CF</button>
                 <button id="btn" class="btn">CK</button>
                 <button id="btn" class="btn">KC</button>
                 <button id="btn" class="btn">KF</button>
-                <!-- <button id="btn" class="btn">INV</button>
-                <button id="btn" class="btn">BKSP</button> -->
             </div>
         </div>
     </section>
 
+    <!-- FOOTER SECTION -->
     <footer>
         <h2>	&#169 By <strong>SMARAN SATAPATHY</strong></h2>
         <a href="https://www.linkedin.com/in/smaran-satapathy-388270257/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" alt="" width="30px" height="30px" class="insta"></a> <a href="https://www.instagram.com/smaransatapathy/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="" width="30px" height="30px"></a><a href="mailto:smaransatapathy31@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" alt="" width="40px" height="30px"></a>
     </footer>
     </footer>
 
-    <!-- <script src="/index.js"></script> -->
     <script>
-        let string =""
+let string =""
 let fahr=""
 let cel=""
 let kel=""
@@ -222,65 +187,74 @@ let buttons=document.querySelectorAll('.btn')
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click',(e)=>{
 
+        // JavaScript to convert CELSIUS TO FAHRENHEIT
         if(e.target.innerHTML=='CF' && countc!=0)
         {
-            // count++;
             fahr=((9*string)/5)+32
             fahr=eval(fahr)
             
             document.querySelector('textarea').value=` Temperature in Celsius is: ${string} \n Ans: Temperature in Fahr is: ${fahr}`
             countc=0
         }
+
+         // JavaScript to convert CELSIUS TO KELVIN
         else if(e.target.innerHTML=='CK' && countc!=0)
         {
-            // count++;
             kel=parseInt(string)+273.15
             kel=eval(kel)
             
             document.querySelector('textarea').value=` Temperature in Celsius is: ${string} \n Ans: Temperature in Kelvin is: ${kel}`
             countc=0
         }
+
+         // JavaScript to convert FAHRENHEIT TO CELSIUS
         else if(e.target.innerHTML=='FC' &&countf!=0)
         {
-            // count++;
             cel=(5*(string-32))/9
             cel=eval(cel)
             
             document.querySelector('textarea').value=` Temperature in Fahr is: ${string} \n Ans: Temperature in Celsius is: ${cel}`
             countf=0
         }
+
+        // JavaScript to convert FAHRENHEIT TO KELVIN
         else if(e.target.innerHTML=='FK' &&countf!=0)
         {
-            // count++;
             kel=((5*(string-32))/9)+273.15
             kel=eval(kel)
             
             document.querySelector('textarea').value=` Temperature in Fahr is: ${string} \n Ans: Temperature in Kelvin is: ${kel}`
             countf=0
         }
+
+        // JavaScript to convert KELVIN TO CELSIUS
         else if(e.target.innerHTML=='KC' &&countk!=0)
         {
-            // count++;
             cel=string-273.15
             cel=eval(cel)
             
             document.querySelector('textarea').value=` Temperature in Kelvin is: ${string} \n Ans: Temperature in Celsius is: ${cel}`
             countk=0
         }
+
+        // JavaScript to convert KELVIN TO FAHRENHEIT
         else if(e.target.innerHTML=='KF' &&countk!=0)
         {
-            // count++;
             fahr=(((string-273.15)*9)/5)+32
             fahr=eval(fahr)
             
             document.querySelector('textarea').value=` Temperature in Kelvin is: ${string} \n Ans: Temperature in Fahrenheit is: ${fahr}`
             countk=0
         }
+
+        // JavaScript to CLEAR the TEXTAREA
         else if(e.target.innerHTML=='CLEAR')
         {
             string=""
             document.querySelector('textarea').value=string
         }
+
+        // JavaScript to initiate BACKPSACE
         else if(e.target.innerHTML=='BKSP')
         {
             for( i=0;i<=string.length-2;i++)
@@ -291,31 +265,29 @@ Array.from(buttons).forEach((button)=>{
             sen=""
             document.querySelector('textarea').value=string
         }
+
+        //JavaScript to SHOW THE ALERT that entered temperature is in FAHRENHEIT
         else if(e.target.innerHTML=='F')
         {
             alert("Entered fahrenheit")
            countf++
         }
+
+        //JavaScript to SHOW THE ALERT that entered temperature is in CELSIUS
         else if(e.target.innerHTML=='C')
         {
             alert("Entered Celsius")
            countc++
         }
+
+        //JavaScript to SHOW THE ALERT that entered temperature is in KELVIN
         else if(e.target.innerHTML=='K')
         {
             alert("Entered Kelvin")
            countk++
         }
 
-        // else if(e.target.innerHTML=='INV')
-        // {
-        //     cel=(5*(fahr-32))/9
-        //         cel=eval(cel)
-                 
-        //         document.querySelector('textarea').value=` Temperature in Fahr is: ${fahr} \n Ans: Temperature in Cel is: ${cel}`
-        //         // document.querySelector('textarea').value=""
-        // }
-
+        //JavaScript to enter the numbers in the textarea
         else{
             console.log(e.target)
         string=string+e.target.innerHTML
@@ -329,9 +301,6 @@ Array.from(buttons).forEach((button)=>{
         
     })
 })
-
-//C/5=(F-32)/9
-//=> (9C/5)+32
     </script>
 </body>
 </html>
